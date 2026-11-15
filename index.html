@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color" content="#080f20">
+
+<meta name="description" content="Mohammad Sweidan — Computer Science student and technology enthusiast.">
+
+<title>Mohammad Sweidan | Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+
+  --bg:#080f20;
+
+  --panel:#101f39;
+
+  --blue:#398cff;
+
+  --light:#70b5ff;
+
+  --cyan:#45d8e8;
+
+  --text:#edf4ff;
+
+  --muted:#9aacc7;
+
+  --border:rgba(125,165,220,.17);
+
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+
+  background:radial-gradient(circle at 80% 5%,rgba(42,113,218,.16),transparent 30%),var(--bg);
+
+  color:var(--text);
+
+  font-family:Inter,sans-serif;
+
+  line-height:1.7;
+
+}
+
+a{text-decoration:none;color:inherit}
+
+button{font:inherit;cursor:pointer}
+
+.container{width:min(1160px,90%);margin:auto}
+
+header{
+
+  position:sticky;top:0;z-index:100;
+
+  background:rgba(8,15,32,.9);
+
+  backdrop-filter:blur(18px);
+
+  border-bottom:1px solid var(--border);
+
+}
+
+.navbar{min-height:75px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+
+.logo{font:700 22px "Space Grotesk"}
+
+.logo span{color:var(--light)}
+
+.nav-links{display:flex;gap:22px;list-style:none}
+
+.nav-links a{font-size:13px;color:var(--muted);font-weight:600}
+
+.nav-links a:hover,.nav-links a.active{color:var(--light)}
+
+.menu-btn{display:none;background:var(--panel);color:white;border:1px solid var(--border);padding:9px 13px;border-radius:9px}
+
+.page{display:none;animation:appear .4s ease}
+
+.page.active{display:block}
+
+@keyframes appear{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+.section{padding:85px 0}
+
+.eyebrow{color:var(--light);font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:17px}
+
+h1,h2,h3{font-family:"Space Grotesk";line-height:1.2}
+
+h1{font-size:clamp(42px,7vw,76px);letter-spacing:-3px}
+
+h2{font-size:clamp(32px,5vw,48px);margin-bottom:17px}
+
+h3{font-size:21px;margin-bottom:12px}
+
+.gradient{
+
+  background:linear-gradient(100deg,#70b5ff,#398cff,#55dce8);
+
+  -webkit-background-clip:text;background-clip:text;color:transparent
+
+}
+
+.lead{max-width:690px;color:var(--muted);font-size:16px}
+
+.heading{margin-bottom:38px}
+
+.heading p{color:var(--muted);max-width:680px}
+
+.btn{
+
+  display:inline-flex;justify-content:center;align-items:center;
+
+  padding:13px 21px;border-radius:10px;font-size:14px;font-weight:700;
+
+  transition:.25s;border:1px solid transparent
+
+}
+
+.primary{background:linear-gradient(110deg,#2878ee,#42a5ff);color:white}
+
+.primary:hover{transform:translateY(-3px);box-shadow:0 12px 30px #2878ee55}
+
+.outline{border-color:var(--border);background:#ffffff08}
+
+.outline:hover{border-color:var(--blue);color:var(--light)}
+
+.card{
+
+  background:linear-gradient(145deg,#132644e0,#0c192fe0);
+
+  border:1px solid var(--border);border-radius:18px;padding:26px;
+
+  transition:.3s
+
+}
+
+.card:hover{transform:translateY(-5px);border-color:#4b97ff80}
+
+.grid{display:grid;gap:22px}
+
+.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+
+.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+
+.icon{
+
+  width:49px;height:49px;display:grid;place-items:center;
+
+  border-radius:14px;background:#388bff20;color:var(--light);
+
+  font-size:21px;margin-bottom:18px
+
+}
+
+.muted{color:var(--muted)}
+
+.tag{
+
+  display:inline-block;border:1px solid #4d97ff38;
+
+  background:#367ddc19;color:#a8d1ff;padding:5px 10px;
+
+  border-radius:30px;font-size:11px;font-weight:700;margin:5px 4px 0 0
+
+}
+
+/* HOME */
+
+.hero{
+
+  min-height:620px;display:grid;grid-template-columns:1.15fr .85fr;
+
+  align-items:center;gap:45px;padding:70px 0 90px
+
+}
+
+.hero h1{margin-bottom:23px}
+
+.hero .lead{margin-bottom:29px}
+
+.actions{display:flex;gap:13px;flex-wrap:wrap}
+
+.meta{display:flex;gap:25px;flex-wrap:wrap;margin-top:40px;color:var(--muted);font-size:12px}
+
+.meta strong{display:block;color:white;font-size:14px}
+
+.visual{min-height:390px;display:grid;place-items:center;position:relative}
+
+.orbit{
+
+  width:310px;height:310px;border:1px solid #5ca1ff44;
+
+  border-radius:50%;display:grid;place-items:center;position:relative
+
+}
+
+.orbit:before,.orbit:after{
+
+  content:"";position:absolute;border:1px solid #5ca1ff25;border-radius:50%
+
+}
+
+.orbit:before{width:245px;height:245px}
+
+.orbit:after{width:375px;height:375px}
+
+.monogram{
+
+  width:170px;height:170px;display:grid;place-items:center;
+
+  border-radius:45px;transform:rotate(-8deg);
+
+  background:linear-gradient(145deg,#1c4c91,#102342);
+
+  border:1px solid #79b8ff88;
+
+  box-shadow:0 25px 80px #1b6de248;
+
+  font:700 62px "Space Grotesk";color:#d9edff
+
+}
+
+.dot{position:absolute;width:13px;height:13px;background:var(--cyan);border-radius:50%;box-shadow:0 0 22px var(--cyan)}
+
+.d1{top:12%;right:15%}.d2{bottom:12%;left:13%}.d3{top:50%;left:-3%}
+
+.floating{
+
+  position:absolute;padding:11px 15px;border:1px solid var(--border);
+
+  background:#0c1c35;border-radius:12px;color:#cce3ff;font-size:12px
+
+}
+
+.f1{top:8%;left:0}.f2{bottom:9%;right:0}
+
+.quick{padding-bottom:80px;margin-top:-10px}
+
+.quick .card p{font-size:13px;color:var(--muted)}
+
+/* ABOUT */
+
+.about-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px}
+
+.about-mark{
+
+  min-height:310px;display:grid;place-items:center;border-radius:22px;
+
+  border:1px solid var(--border);
+
+  background:radial-gradient(circle,#3083ff38,transparent 50%),#0a1529
+
+}
+
+.about-mark span{font:700 86px "Space Grotesk";color:#b9dcff}
+
+.about-copy p{color:var(--muted);margin-bottom:15px}
+
+.info-list{display:grid;grid-template-columns:repeat(2,1fr);gap:13px;margin-top:25px}
+
+.info-item{border:1px solid var(--border);border-radius:12px;padding:13px;font-size:13px}
+
+.info-item span{display:block;color:var(--muted);font-size:11px}
+
+/* SKILLS */
+
+.skill{width:100%;text-align:left;color:var(--text);background:transparent}
+
+.skill p{color:var(--muted);font-size:13px}
+
+.more{display:block;color:var(--light);font-size:12px;font-weight:700;margin-top:17px}
+
+.skill-detail,.detail{
+
+  display:none;margin-top:15px;padding-top:15px;
+
+  border-top:1px solid var(--border);color:var(--muted);font-size:13px
+
+}
+
+.skill.open .skill-detail,.project.open .detail{display:block}
+
+/* PROJECTS */
+
+.project-visual{
+
+  min-height:150px;display:grid;place-items:center;border-radius:13px;
+
+  margin-bottom:20px;background:radial-gradient(circle,#4096ff40,transparent 55%),#0b1930;
+
+  border:1px solid var(--border);font:700 30px "Space Grotesk";color:#c7e3ff
+
+}
+
+.project p{color:var(--muted);font-size:13px;margin:12px 0}
+
+.text-link{color:var(--light);font-size:13px;font-weight:700;background:none;border:0}
+
+/* TIMELINE */
+
+.timeline{border-left:1px solid #5199ff66;margin-left:9px;padding-left:28px}
+
+.timeline-item{position:relative;margin-bottom:30px}
+
+.timeline-item:before{
+
+  content:"";position:absolute;width:11px;height:11px;border-radius:50%;
+
+  background:var(--light);left:-34px;top:7px;box-shadow:0 0 15px #469affb3
+
+}
+
+.timeline-item p{color:var(--muted);font-size:14px}
+
+.date{color:var(--light);font-size:12px;font-weight:700;margin-bottom:8px}
+
+/* CONTACT */
+
+.contact-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:24px}
+
+.contact-method{display:flex;gap:15px;align-items:center;padding:17px 0;border-bottom:1px solid var(--border)}
+
+.contact-method:last-child{border:0}
+
+.contact-method .icon{flex-shrink:0;margin:0}
+
+.contact-method small{display:block;color:var(--muted);font-size:11px}
+
+.contact-method strong{font-size:14px;overflow-wrap:anywhere}
+
+.contact-method a:hover strong{color:var(--light)}
+
+/* FOOTER */
+
+footer{
+
+  border-top:1px solid var(--border);padding:40px 0 25px;
+
+  text-align:center;background:#040a1670
+
+}
+
+.quote{
+
+  max-width:780px;margin:0 auto 25px;
+
+  font:600 clamp(19px,3vw,27px) "Space Grotesk";
+
+  line-height:1.6;color:#d8eaff
+
+}
+
+.quote span{color:var(--light)}
+
+.footer-links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin:20px 0;font-size:12px;color:var(--muted)}
+
+.footer-small{color:var(--muted);font-size:12px}
+
+@media(max-width:900px){
+
+  .nav-links{gap:12px}.nav-links a{font-size:11px}
+
+  .three{grid-template-columns:repeat(2,minmax(0,1fr))}
+
+}
+
+@media(max-width:700px){
+
+  .menu-btn{display:block}
+
+  .nav-links{
+
+    display:none;position:absolute;top:68px;left:5%;right:5%;
+
+    padding:18px;flex-direction:column;gap:0;
+
+    background:#0d1a31;border:1px solid var(--border);border-radius:14px
+
+  }
+
+  .nav-links.show{display:flex}
+
+  .nav-links a{display:block;padding:12px;font-size:13px}
+
+  .hero{grid-template-columns:1fr;text-align:center;padding-top:60px}
+
+  .hero .lead{margin-left:auto;margin-right:auto}
+
+  .actions,.meta{justify-content:center}
+
+  .visual{min-height:340px}
+
+  .orbit{transform:scale(.78)}
+
+  .two,.three,.about-layout,.contact-layout{grid-template-columns:1fr}
+
+  .section{padding:65px 0}
+
+}
+
+@media(prefers-reduced-motion:reduce){
+
+  *,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+  <div class="container navbar">
+
+    <a class="logo" href="#home">MS<span>.</span></a>
+
+    <button class="menu-btn" id="menuBtn">☰ Menu</button>
+
+    <ul class="nav-links" id="navLinks">
+
+      <li><a href="#home" class="active">Home</a></li>
+
+      <li><a href="#about">About</a></li>
+
+      <li><a href="#skills">Skills</a></li>
+
+      <li><a href="#projects">Projects</a></li>
+
+      <li><a href="#education">Education</a></li>
+
+      <li><a href="#experience">Experience</a></li>
+
+      <li><a href="#contact">Contact</a></li>
+
+    </ul>
+
+  </div>
+
+</header>
+
+<main class="container">
+
+<!-- HOME -->
+
+<section class="page active" id="home">
+
+  <div class="hero">
+
+    <div>
+
+      <div class="eyebrow">Welcome to my portfolio</div>
+
+      <h1>Building my future through <span class="gradient">technology.</span></h1>
+
+      <p class="lead">
+
+        I'm Mohammad Sweidan, a Computer Science student with an IT background.
+
+        I'm passionate about technology, learning new skills, and turning ideas
+
+        into meaningful digital experiences.
+
+      </p>
+
+      <div class="actions">
+
+        <a href="#projects" class="btn primary">Explore My Work ↗</a>
+
+        <a href="#contact" class="btn outline">Get In Touch</a>
+
+      </div>
+
+      <div class="meta">
+
+        <div><strong>Computer Science</strong>Academic journey</div>
+
+        <div><strong>IT Background</strong>Technical foundation</div>
+
+        <div><strong>Always Learning</strong>Growth mindset</div>
+
+      </div>
+
+    </div>
+
+    <div class="visual">
+
+      <div class="orbit">
+
+        <div class="monogram">MS</div>
+
+        <i class="dot d1"></i><i class="dot d2"></i><i class="dot d3"></i>
+
+      </div>
+
+      <div class="floating f1">Creative Thinking</div>
+
+      <div class="floating f2">Future Developer</div>
+
+    </div>
+
+  </div>
+
+  <div class="grid three quick">
+
+    <div class="card"><div class="icon">⌘</div><h3>Technology</h3><p>Exploring how digital systems work and how they can solve real problems.</p></div>
+
+    <div class="card"><div class="icon">✦</div><h3>Continuous Learning</h3><p>Building knowledge step by step through practice and curiosity.</p></div>
+
+    <div class="card"><div class="icon">↗</div><h3>Future Focused</h3><p>Working toward meaningful skills, useful projects, and independence.</p></div>
+
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="page section" id="about">
+
+  <div class="heading">
+
+    <div class="eyebrow">Who I Am</div>
+
+    <h2>About <span class="gradient">Me.</span></h2>
+
+    <p>A little more about my background, interests, and the direction I'm working toward.</p>
+
+  </div>
+
+  <div class="about-layout">
+
+    <div class="about-mark"><span>MS.</span></div>
+
+    <div class="about-copy">
+
+      <h3>Curious mind. Technical ambition.</h3>
+
+      <p>My name is Mohammad Sweidan. I have a background in Information Technology and I'm currently studying Computer Science.</p>
+
+      <p>My interest in technology comes from understanding how things work, solving problems, and creating useful digital experiences. I enjoy practical learning and improving through hands-on projects.</p>
+
+      <p>I'm at the beginning of my professional journey. I believe that strong results come from patience, consistency, responsibility, and the courage to keep learning.</p>
+
+      <p>My goal is to develop my technical abilities, build a strong portfolio, and become capable of creating solutions that have real value.</p>
+
+      <div class="info-list">
+
+        <div class="info-item"><span>Full Name</span>Mohammad Sweidan</div>
+
+        <div class="info-item"><span>Field</span>Computer Science</div>
+
+        <div class="info-item"><span>Background</span>Information Technology</div>
+
+        <div class="info-item"><span>Current Focus</span>Learning & Projects</div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section class="page section" id="skills">
+
+  <div class="heading">
+
+    <div class="eyebrow">What I'm Learning</div>
+
+    <h2>My <span class="gradient">Skills.</span></h2>
+
+    <p>A growing set of technical and practical skills. Select a card to read more.</p>
+
+  </div>
+
+  <div class="grid three">
+
+    <button class="card skill" onclick="toggleSkill(this)">
+
+      <div class="icon">⌨</div><h3>HTML</h3><p>Learning to structure clear and accessible web pages.</p>
+
+      <span class="more">View details +</span>
+
+      <div class="skill-detail">Understanding page structure, semantic elements, links, forms, and the foundations of web content.</div>
+
+    </button>
+
+    <button class="card skill" onclick="toggleSkill(this)">
+
+      <div class="icon">◈</div><h3>CSS</h3><p>Learning visual design and responsive layouts.</p>
+
+      <span class="more">View details +</span>
+
+      <div class="skill-detail">Practicing colors, typography, spacing, Flexbox, Grid, responsive design, and interface styling.</div>
+
+    </button>
+
+    <button class="card skill" onclick="toggleSkill(this)">
+
+      <div class="icon">JS</div><h3>JavaScript</h3><p>Developing my understanding of interactive web experiences.</p>
+
+      <span class="more">View details +</span>
+
+      <div class="skill-detail">A learning area focused on programming fundamentals, variables, conditions, functions, and browser interactions.</div>
+
+    </button>
+
+    <button class="card skill" onclick="toggleSkill(this)">
+
+      <div class="icon">⚙</div><h3>Computer Maintenance</h3><p>Practical interest in computer hardware and troubleshooting.</p>
+
+      <span class="more">View details +</span>
+
+      <div class="skill-detail">Basic familiarity with computer components, system setup, common issues, and practical troubleshooting.</div>
+
+    </button>
+
+    <button class="card skill" onclick="toggleSkill(this)">
+
+      <div class="icon">▦</div><h3>Microsoft Office</h3><p>Using productivity tools for documents and everyday tasks.</p>
+
+      <span class="more">View details +</span>
+
+      <div class="skill-detail">Experience with Microsoft Word and developing broader productivity and document-formatting skills.</div>
+
+    </button>
+
+    <button class="card skill" onclick="toggleSkill(this)">
+
+      <div class="icon">⌘</div><h3>IT Fundamentals</h3><p>A technical foundation from my Information Technology studies.</p>
+
+      <span class="more">View details +</span>
+
+      <div class="skill-detail">An academic foundation in information technology, computer systems, and related technical concepts.</div>
+
+    </button>
+
+  </div>
+
+  <div class="card" style="margin-top:25px">
+
+    <h3>My Learning Philosophy</h3>
+
+    <p class="muted">Skills are not built overnight. I focus on understanding the basics, practicing regularly, learning from mistakes, and applying knowledge through real projects.</p>
+
+  </div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section class="page section" id="projects">
+
+  <div class="heading">
+
+    <div class="eyebrow">Selected Work</div>
+
+    <h2>My <span class="gradient">Projects.</span></h2>
+
+    <p>A collection of project concepts and prototypes that represent the kind of digital solutions I want to build and improve.</p>
+
+  </div>
+
+  <div class="grid two">
+
+    <article class="card project">
+
+      <div class="project-visual">MS / Analytics</div>
+
+      <span class="tag">Concept Project</span><span class="tag">Dashboard</span>
+
+      <h3>MS Analytics</h3><p>A dashboard concept for presenting information in a clear and organized way.</p>
+
+      <button class="text-link" onclick="toggleProject(this)">Explore project ↗</button>
+
+      <div class="detail"><strong>Objective</strong><p>Explore how data can be organized into useful visual summaries.</p><strong>Planned Features</strong><p>Dashboard layout, summary cards, charts, filters, and responsive design.</p><strong>Learning Focus</strong><p>HTML, CSS, JavaScript, data presentation, and interface design.</p><p><em>This is a concept project, not a completed client product.</em></p></div>
+
+    </article>
+
+    <article class="card project">
+
+      <div class="project-visual">MS / Commerce</div>
+
+      <span class="tag">Concept Project</span><span class="tag">E-Commerce</span>
+
+      <h3>MS Commerce</h3><p>An online store concept focused on product presentation and user experience.</p>
+
+      <button class="text-link" onclick="toggleProject(this)">Explore project ↗</button>
+
+      <div class="detail"><strong>Objective</strong><p>Design a simple and attractive shopping experience.</p><strong>Planned Features</strong><p>Product cards, categories, product details, shopping cart interface, and search.</p><strong>Learning Focus</strong><p>Responsive layouts, JavaScript interactions, and interface organization.</p><p><em>This is a concept project, not a completed client product.</em></p></div>
+
+    </article>
+
+    <article class="card project">
+
+      <div class="project-visual">MS / Academy</div>
+
+      <span class="tag">Concept Project</span><span class="tag">Education</span>
+
+      <h3>MS Academy</h3><p>A learning platform concept for organizing lessons and learning resources.</p>
+
+      <button class="text-link" onclick="toggleProject(this)">Explore project ↗</button>
+
+      <div class="detail"><strong>Objective</strong><p>Make educational content easier to browse and follow.</p><strong>Planned Features</strong><p>Course pages, lesson lists, progress indicators, and learning resources.</p><strong>Learning Focus</strong><p>Web structure, navigation, accessibility, and interactive components.</p><p><em>This is a concept project, not a completed client product.</em></p></div>
+
+    </article>
+
+    <article class="card project">
+
+      <div class="project-visual">MS / TechCare</div>
+
+      <span class="tag">Concept Project</span><span class="tag">IT Services</span>
+
+      <h3>MS TechCare</h3><p>A service-management concept for organizing computer support requests.</p>
+
+      <button class="text-link" onclick="toggleProject(this)">Explore project ↗</button>
+
+      <div class="detail"><strong>Objective</strong><p>Explore a simple way to organize technical support requests.</p><strong>Planned Features</strong><p>Service request form, issue categories, request status, and service information.</p><strong>Learning Focus</strong><p>Forms, user flows, interface design, and basic data handling.</p><p><em>This is a concept project, not a completed client product.</em></p></div>
+
+    </article>
+
+  </div>
+
+</section>
+
+<!-- EDUCATION -->
+
+<section class="page section" id="education">
+
+  <div class="heading">
+
+    <div class="eyebrow">Academic Background</div>
+
+    <h2>My <span class="gradient">Education.</span></h2>
+
+    <p>My academic path and the foundation behind my interest in technology.</p>
+
+  </div>
+
+  <div class="card">
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+
+        <div class="date">Current Academic Journey</div>
+
+        <h3>Computer Science</h3>
+
+        <p>Studying Computer Science at the Islamic University of Lebanon (IUL), building academic knowledge and developing my understanding of computing.</p>
+
+      </div>
+
+      <div class="timeline-item">
+
+        <div class="date">Previous Studies</div>
+
+        <h3>Technical Baccalaureate — Information Technology</h3>
+
+        <p>A vocational technical background that introduced me to IT concepts, computer systems, and practical technology topics.</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="card" style="margin-top:22px">
+
+    <h3>Beyond the Classroom</h3>
+
+    <p class="muted">I believe education becomes stronger when theory is combined with practice. That's why I aim to turn what I learn into small projects and practical exercises.</p>
+
+  </div>
+
+</section>
+
+<!-- EXPERIENCE -->
+
+<section class="page section" id="experience">
+
+  <div class="heading">
+
+    <div class="eyebrow">Growth & Development</div>
+
+    <h2>My <span class="gradient">Experience.</span></h2>
+
+    <p>I'm at an early stage of my professional journey, building experience through learning, responsibility, and practical work.</p>
+
+  </div>
+
+  <div class="grid two">
+
+    <div class="card">
+
+      <div class="icon">✦</div><h3>Teaching & Communication</h3>
+
+      <p class="muted">Experience helping students understand school subjects through explanation, practice, and step-by-step learning.</p>
+
+      <span class="tag">Communication</span><span class="tag">Organization</span><span class="tag">Patience</span>
+
+    </div>
+
+    <div class="card">
+
+      <div class="icon">⌘</div><h3>Independent Learning</h3>
+
+      <p class="muted">Developing technical knowledge through self-study, experimentation, and building personal website projects.</p>
+
+      <span class="tag">Self-Learning</span><span class="tag">Problem Solving</span><span class="tag">Practice</span>
+
+    </div>
+
+  </div>
+
+  <div class="card" style="margin-top:22px">
+
+    <h3>What I'm Working Toward</h3>
+
+    <p class="muted">My next steps are to strengthen programming fundamentals, complete practical projects, improve my English and technical communication, and gradually build a professional body of work.</p>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="page section" id="contact">
+
+  <div class="heading">
+
+    <div class="eyebrow">Let's Connect</div>
+
+    <h2>Get In <span class="gradient">Touch.</span></h2>
+
+    <p>Have a question, an idea, or an opportunity to discuss? Feel free to contact me through the channels below.</p>
+
+  </div>
+
+  <div class="contact-layout">
+
+    <div class="card">
+
+      <h3>Contact Information</h3>
+
+      <div class="contact-method">
+
+        <div class="icon">✉</div>
+
+        <div><small>Email</small><a href="mailto:mohammadswaidan680@gmail.com"><strong>mohammadswaidan680@gmail.com</strong></a></div>
+
+      </div>
+
+      <div class="contact-method">
+
+        <div class="icon">◉</div>
+
+        <div><small>WhatsApp</small><a href="https://wa.me/96181931058" target="_blank" rel="noopener noreferrer"><strong>Chat on WhatsApp</strong></a></div>
+
+      </div>
+
+      <div class="contact-method">
+
+        <div class="icon">☎</div>
+
+        <div><small>Phone</small><a href="tel:+96181931058"><strong>+961 81 931 058</strong></a></div>
+
+      </div>
+
+      <p class="muted" style="font-size:13px;margin-top:15px">For professional inquiries, project discussions, and general communication.</p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>A Message to the Future</h3>
+
+      <p class="muted">Every meaningful journey begins with a decision to take the first step. I'm focused on learning, improving, and creating opportunities through knowledge and consistent effort.</p>
+
+      <div style="margin-top:25px"><a class="btn primary" href="https://wa.me/96181931058" target="_blank" rel="noopener noreferrer">Start a WhatsApp Conversation ↗</a></div>
+
+      <div style="margin-top:15px"><a class="btn outline" href="mailto:mohammadswaidan680@gmail.com">Send an Email ↗</a></div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+
+  <div class="container">
+
+    <p class="quote">
+
+      "لا تنتظر أن يُبنى لك الطريق؛
+
+      <span>تعلّم كيف تصنع خطواتك،</span>
+
+      وامضِ بها نحو مستقبلك.
+
+      فأجمل نجاح هو الذي تبدأه بنفسك."
+
+    </p>
+
+    <div class="footer-links">
+
+      <a href="#home">Home</a><a href="#about">About</a>
+
+      <a href="#projects">Projects</a><a href="#contact">Contact</a>
+
+    </div>
+
+    <p class="footer-small">Designed with purpose by Mohammad Sweidan.</p>
+
+    <p class="footer-small">© <span id="year"></span> Mohammad Sweidan. All rights reserved.</p>
+
+  </div>
+
+</footer>
+
+<script>
+
+const pages = document.querySelectorAll(".page");
+
+const navLinks = document.querySelectorAll(".nav-links a");
+
+const menuBtn = document.getElementById("menuBtn");
+
+const navMenu = document.getElementById("navLinks");
+
+function showPage(){
+
+  const id = location.hash.replace("#","") || "home";
+
+  const target = document.getElementById(id);
+
+  const page = target && target.classList.contains("page")
+
+    ? target : document.getElementById("home");
+
+  pages.forEach(p => p.classList.remove("active"));
+
+  page.classList.add("active");
+
+  navLinks.forEach(link => {
+
+    link.classList.toggle("active",link.getAttribute("href")==="#"+page.id);
+
+  });
+
+  navMenu.classList.remove("show");
+
+  window.scrollTo({top:0,behavior:"smooth"});
+
+}
+
+window.addEventListener("hashchange",showPage);
+
+menuBtn.addEventListener("click",()=>{
+
+  navMenu.classList.toggle("show");
+
+});
+
+navLinks.forEach(link=>{
+
+  link.addEventListener("click",()=>navMenu.classList.remove("show"));
+
+});
+
+function toggleSkill(button){
+
+  button.classList.toggle("open");
+
+  const label=button.querySelector(".more");
+
+  label.textContent=button.classList.contains("open")
+
+    ?"Close details −":"View details +";
+
+}
+
+function toggleProject(button){
+
+  const card=button.closest(".project");
+
+  card.classList.toggle("open");
+
+  button.textContent=card.classList.contains("open")
+
+    ?"Close project details −":"Explore project ↗";
+
+}
+
+document.getElementById("year").textContent=new Date().getFullYear();
+
+showPage();
+
+</script>
+
+</body>
+
+</html>
